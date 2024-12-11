@@ -1,0 +1,79 @@
+@use '../../assets/style/mixins.scss';
+@use '../../assets/style/variables.scss' as vars;
+.ticket{
+	&_wrapper{
+		@include mixins.flex-container(space-around, center, row);
+		min-height: 200px;
+		min-width: 500px;
+		box-shadow: -2px 9px 15px 0px rgb(222, 225, 241);
+		border-radius: 10px;
+		padding: 0 20px;
+		box-sizing: border-box;
+}
+&_right-side{
+	min-width: 55%;
+	font-family: "Inter", sans-serif;
+		&_time{
+			width: 100%;
+			@include mixins.flex-container(center, center, row);
+			font-size: 30px;
+		
+			&_separator{
+				margin: 0 10px;
+			}
+		}
+		&_date{
+			width: 100%;
+			@include mixins.flex-container(space-between, center, row);
+			&_origin,
+			&_destination{
+				&_city{
+					font-weight: bold;
+				}
+				&_date{
+					color:  vars.$gray-text-color;
+				}
+				@include mixins.flex-container(center, flex-start, column);
+				font-size: 12px;
+			}
+
+		}
+		&_stops{
+			@include mixins.flex-container(center, center, column);
+			font-size: 12px;
+			font-family: "Inter", sans-serif;
+			margin: 0 10px;
+			width: 100%;
+			hr{
+				width: 100%;
+				border: 0.5px solid rgba(0,0,0,0.2);
+			}
+		}
+	}
+	&_left-side{
+		@include mixins.flex-container(center, center, column);
+		gap: 20px;
+	}
+	&_separator{
+		height: 100%;
+		width: 100%;
+		background-color: vars.$accent-color;
+		transform: rotate(90deg);
+	}
+	&_buy-button{
+			@include mixins.flex-container(center, center, row);
+			min-height: 50px;
+			color: vars.$text-color;
+			font-family: "Inter", sans-serif;
+			min-width: 130px;
+			border:none;
+			background-color: vars.$accent-color;
+			border-radius: 5px;
+			cursor: pointer;
+			 transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+	}
+}
