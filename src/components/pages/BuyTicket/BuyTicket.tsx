@@ -5,6 +5,7 @@ import planeAnimation from "../../../assets/plane.json";
 import "./BuyTicket.scss";
 import LottieAnimation from "../../elements/Lottie/Lottie";
 import { useEffect, useState } from "react";
+import ScrollToTopButton from "../../elements/ScrollToTopButton/ScrollToTopButton";
 
 
 const BuyTicket = () => {
@@ -66,6 +67,7 @@ const BuyTicket = () => {
               />
             ))}
           </div>
+          <ScrollToTopButton />
         </>
       )}
     </div>

@@ -1,20 +1,9 @@
-@use '../../../assets/style/mixins.scss';
-.buy-ticket{
-	&_wrapper{
-			@include mixins.flex-container(center, flex-start, row);
-			gap: 20px;
-			margin-top: 50px;
-	}
-	&_tickets{
-			@include mixins.flex-container(center, center, column);
-			gap: 20px;
-	}
-}
+@use "../../../assets/style/variables.scss" as vars;
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  background-color: #3498db;
+  right: 50px;
+  background-color: vars.$accent-color;
   border: none;
   border-radius: 50%;
   width: 50px;
